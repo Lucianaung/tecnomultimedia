@@ -1,7 +1,7 @@
 class PrincipalAG {
   PFont tipog;
   int pantalla, text;
-  PrincipalJuego principaljg;
+  //PrincipalJuego principaljg;
   FondosAG fondosag;
   Textos textos;
   BotonesAG botonesG_top, botonesG_bot, botonseguir, botonIzq, botonDer, botonVolver;
@@ -10,7 +10,7 @@ class PrincipalAG {
     ///tipog = loadFont ("AgencyFB-Bold-50.vlw");
     //textFont(tipog);
 
-    principaljg = new PrincipalJuego();
+   // principaljg = new PrincipalJuego();
     fondosag = new FondosAG();
     textos = new Textos();
     botonesG_top = new BotonesAG(30, 220, 320, 150, 40); //(int b_px, int b_py, int b_ancho, int b_alto)
@@ -160,5 +160,6 @@ class PrincipalAG {
     if (botonVolver.botonClickear_AG(width/2, height-160, 150, 40) && pantalla ==botonVolver.partida) {
       pantalla = botonVolver.destino;
     }
+  // principaljg.detec_BotonesJU();
   }
 }
