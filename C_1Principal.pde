@@ -1,16 +1,16 @@
 class PrincipalAG {
   PFont tipog;
   int pantalla, text;
-  //PrincipalJuego principaljg;
+  PrincipalJuego principaljg;
   FondosAG fondosag;
   Textos textos;
   BotonesAG botonesG_top, botonesG_bot, botonseguir, botonIzq, botonDer, botonVolver;
 
   PrincipalAG() {
-    ///tipog = loadFont ("AgencyFB-Bold-50.vlw");
+    //tipog = loadFont ("AgencyFB-Bold-50.vlw");
     //textFont(tipog);
 
-   // principaljg = new PrincipalJuego();
+    principaljg = new PrincipalJuego();
     fondosag = new FondosAG();
     textos = new Textos();
     botonesG_top = new BotonesAG(30, 220, 320, 150, 40); //(int b_px, int b_py, int b_ancho, int b_alto)
@@ -75,7 +75,7 @@ class PrincipalAG {
     }
     if (pantalla == 9) {
       textos.dibujarTextos(8);
-      botonseguir.d_Continuar(9, 10); //--------------INSERCIÓN DEL JUEGO - pantalla 24
+      botonseguir.d_Continuar(9, 24); //--------------INSERCIÓN DEL JUEGO - pantalla 24
     }
     if (pantalla == 10) {
       textos.dibujarTextos(9);
@@ -136,9 +136,9 @@ class PrincipalAG {
       textos.d_creditos();
       botonVolver.d_BTexto(23, 0, "VOLVER");
     }
-    //if (pantalla == 24) { //---------------------- JUEGO
-      //principaljg.dibujarP();
-    //}
+    if (pantalla == 24) { //---------------------- JUEGO
+      principaljg.dibujarP();
+    }
   }
 
   void detec_BotonesAG() {
@@ -160,6 +160,6 @@ class PrincipalAG {
     if (botonVolver.botonClickear_AG(width/2, height-160, 150, 40) && pantalla ==botonVolver.partida) {
       pantalla = botonVolver.destino;
     }
-  // principaljg.detec_BotonesJU();
+    principaljg.detec_BotonesJU();
   }
 }

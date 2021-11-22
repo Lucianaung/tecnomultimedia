@@ -92,13 +92,13 @@ class PrincipalJuego {
       tiempo.segundos = 10;
     }
     if (J_pantalla == 9) { // ganar 3
-      botonEsp.dibujarBopciones(9, 0, "Continuar con la historia"); //---------- EN ESTE CASO SE REINICIARÁ
+      botonEsp.dibujarBopciones(9, 10, "Continuar con la historia"); //---------- EN ESTE CASO SE REINICIARÁ
       tiempo.segundos = 10;
     }
-    //if (J_pantalla == 10){
-    //fondosAG_.dibujarFondosAG(10);
-    //}
-    
+    if (J_pantalla == 10) {
+      fondosAG_.dibujarFondosAG(10);
+      //principalAG_.dibujarPrincipalAG();//----------USAR ESTA OPCION
+    }
   }
 
   void detec_BotonesJU() {

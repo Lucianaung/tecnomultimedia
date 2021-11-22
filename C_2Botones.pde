@@ -2,7 +2,7 @@ class BotonesAG {
   String opcion;
   PImage continuar;
   int px, py, ancho, alto, partida, destino, tamTxt;
-  BotonesAG(int tamTxt_,int b_px, int b_py, int b_ancho, int b_alto) {
+  BotonesAG(int tamTxt_, int b_px, int b_py, int b_ancho, int b_alto) {
     tamTxt = tamTxt_;
     px = b_px;
     py = b_py;
@@ -11,8 +11,8 @@ class BotonesAG {
 
     continuar = loadImage ("sig.png");
   }
-  void d_BTexto(int partida_, int destino_, String opcion_) { /*----------------> botón de opciones*/
-    
+  void d_BTexto(int partida_, int destino_, String opcion_) { //----------------> botón de opciones
+
     partida = partida_;
     destino = destino_;
     opcion = opcion_;
@@ -22,7 +22,7 @@ class BotonesAG {
     rectMode(CENTER);
     rect (px, py, ancho, alto, 2);
     fill(255);
-    textSize(tamTxt); /*------------------- 30 grande, 20 chico*/
+    textSize(tamTxt); //------------------- 30 grande, 20 chico
     textAlign(CENTER, CENTER);
     text(opcion, px, py);
   }
