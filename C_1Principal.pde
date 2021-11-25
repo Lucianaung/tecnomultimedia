@@ -7,8 +7,8 @@ class PrincipalAG {
   BotonesAG botonesG_top, botonesG_bot, botonseguir, botonIzq, botonDer, botonVolver;
 
   PrincipalAG() {
-    //tipog = loadFont ("AgencyFB-Bold-50.vlw");
-    //textFont(tipog);
+    tipog = loadFont ("AgencyFB-Bold-50.vlw");
+    textFont(tipog);
 
     principaljg = new PrincipalJuego();
     fondosag = new FondosAG();
@@ -139,6 +139,7 @@ class PrincipalAG {
     if (pantalla == 24) { //---------------------- JUEGO
       principaljg.dibujarP();
     }
+    
   }
 
   void detec_BotonesAG() {

@@ -1,5 +1,5 @@
 class PrincipalJuego {
-  PrincipalAG principalAG_ ;
+ // PrincipalAG principalAG_ ;
   FondosAG fondosAG_;
   Fondos fondos;
   Inicio inicio;
@@ -8,7 +8,7 @@ class PrincipalJuego {
   Oscuridad oscuridad;
   int J_pantalla;
   PrincipalJuego () {
-    principalAG_ = new PrincipalAG();
+    //principalAG_ = new PrincipalAG();
     fondosAG_ = new FondosAG();
     fondos = new Fondos();
     inicio = new Inicio();
@@ -21,7 +21,7 @@ class PrincipalJuego {
     tiempo = new Tiempo(10);
     oscuridad = new Oscuridad();
     J_pantalla=0;
-    ;
+    println(J_pantalla);
     //back.loop();
     //back.amp(0.3);
   }
@@ -91,13 +91,13 @@ class PrincipalJuego {
       boton.dibujarBopciones(8, 3, "Siguiente nivel");
       tiempo.segundos = 10;
     }
-    if (J_pantalla == 9) { // ganar 3
+    if (J_pantalla == 9) { // ganar 3 ---------------------------- EL ERROR ESTÁ ACÁ ------------------------------------------------------------
       botonEsp.dibujarBopciones(9, 10, "Continuar con la historia"); //---------- EN ESTE CASO SE REINICIARÁ
-      tiempo.segundos = 10;
     }
-    if (J_pantalla == 10) {
-      fondosAG_.dibujarFondosAG(10);
+    if (J_pantalla == 10) { //ACA ESTÁ EL PROBLEMA DEL ERROR. SE GENERA UN BUCLE CUANDO USO principalAG_ no me deja llamar a proncipal desde este lado, de ninguna forma
       //principalAG_.dibujarPrincipalAG();//----------USAR ESTA OPCION
+      //principalAG_.pantalla=10;
+      fondosAG_.dibujarFondosAG(11);
     }
   }
 
